@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EtecFlixApp.Filmes.PanteraNegra"
+              BackgroundColor="#2f2f30" >
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Image x:Name="logo" Style="{StaticResource LogoNoFilme}"/>
+            <ScrollView>
+
+                <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <WebView x:Name="visualizador"
+                         Source="https://www.youtube.com/embed/wL4a4MafSjQ"
+                         Grid.ColumnSpan="2"
+                         Grid.Row="0" Grid.Column="0"
+                         VerticalOptions="FillAndExpand"
+                         BackgroundColor="#2f2f30"/>
+
+                <Image x:Name="poster" Grid.Row="1" Grid.Column="0" Aspect="AspectFill"/>
+
+                <StackLayout Grid.Row="1" Grid.Column="1">
+                    <Label Text="Nome: " Style="{StaticResource LabelTextoVermelho}"/>
+                    <Label Text="Pantera Negra" Style="{StaticResource LabelTextoBranco}"/>
+                    <Label Text="Ano de lançamento" Style="{StaticResource LabelTextoVermelho}"/>
+                    <Label Text="15 de fevereiro de 2018" Style="{StaticResource LabelTextoBranco}"/>
+                    <Label Text="Direção" Style="{StaticResource LabelTextoVermelho}"/>
+                    <Label Text="Ryan Cogler" Style="{StaticResource LabelTextoBranco}"/>
+                    <Label Text="Sinopse" Style="{StaticResource LabelTextoVermelho}"/>
+                    <Label Text="A história de T'Challa, príncipe do reino de Wakanda, que perde o seu pai e viaja para os Estados Unidos, onde tem contato com os Vingadores." Style="{StaticResource LabelTextoBranco}"/>
+                </StackLayout>
+            </Grid>
+           </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+
+
